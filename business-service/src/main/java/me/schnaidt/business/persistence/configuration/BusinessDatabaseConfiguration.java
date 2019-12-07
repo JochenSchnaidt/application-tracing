@@ -4,7 +4,8 @@ import com.zaxxer.hikari.HikariDataSource;
 import me.schnaidt.business.configuration.DatabaseConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.annotation.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -16,15 +17,12 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 
 @Configuration
-//@ConditionalOnProperty(name = "app.audit.auditDatabase.enabled", havingValue = "true")
 @EnableJpaRepositories(
     basePackages = "me.schnaidt.business.persistence.repository",
     entityManagerFactoryRef = "businessEntityManagerFactory",
     transactionManagerRef = "businessTransactionManager"
 )
-//@ComponentScan("de.degussabank.atacama.component.journal.database")
 @EnableTransactionManagement
-//@Import(JournalConfiguration.class)
 public class BusinessDatabaseConfiguration {
 
   @Autowired
