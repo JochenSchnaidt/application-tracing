@@ -2,8 +2,6 @@ package me.schnaidt.business.model;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
-
 @Data
 public class SomeBusinessObject {
 
@@ -11,6 +9,6 @@ public class SomeBusinessObject {
   private String name;
   private String someValue;
   private String otherValue;
-  private LocalDateTime created;
+  private String created;
 
 }
