@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: business-application
+
+# using non spring data properties is derived from the original setup
+database:
+  username: user
+  password: not-empty
+  driver: org.h2.Driver
+  url: jdbc:h2:mem:testdb;Mode=Oracle
+  hibernateDialect: org.hibernate.dialect.H2Dialect
+  hibernateHbm2ddlAuto: update
