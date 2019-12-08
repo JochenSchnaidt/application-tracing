@@ -3,6 +3,7 @@ package me.schnaidt.business.controller;
 import lombok.extern.slf4j.Slf4j;
 import me.schnaidt.business.model.SomeBusinessObject;
 import me.schnaidt.business.persistence.PersistenceService;
+import me.schnaidt.tracing.TraceParameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ public class BusinessController {
   @Autowired
   private PersistenceService persistenceService;
 
+  @TraceParameter
   @GetMapping("/{id}")
   public SomeBusinessObject getById(@PathVariable Long id) {
 
@@ -32,6 +34,7 @@ public class BusinessController {
     return optObject.get();
   }
 
+  @TraceParameter
   @PostMapping(path = "/tbd", consumes = MediaType.APPLICATION_JSON_VALUE)
   SomeBusinessObject persist(@RequestBody SomeBusinessObject someBusinessObject) {
 

@@ -10,3 +10,7 @@ database:
   url: jdbc:h2:mem:testdb;Mode=Oracle
   hibernateDialect: org.hibernate.dialect.H2Dialect
   hibernateHbm2ddlAuto: update
+
+tracing:
+  enabled: true
+
