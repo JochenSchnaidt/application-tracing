@@ -1,4 +1,4 @@
-package me.schnaidt.tracing;
+package me.schnaidt.tracing.aspect;
 
 public interface TraceService {
 

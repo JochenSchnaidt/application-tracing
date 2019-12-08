@@ -1,4 +1,4 @@
-package me.schnaidt.tracing;
+package me.schnaidt.tracing.aspect;
 
 
 import lombok.extern.slf4j.Slf4j;
@@ -22,7 +22,7 @@ public class TraceAspect {
   @Autowired
   private TraceService traceService;
 
-  @Around("@annotation(TraceParameter)")
+  @Around("@annotation(me.schnaidt.tracing.aspect.TraceParameter)")
   public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
 
     HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();

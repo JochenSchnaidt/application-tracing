@@ -13,4 +13,12 @@ database:
 
 tracing:
   enabled: true
+  database:
+    enabled: true
+    username: user
+    password: not-empty
+    driver: org.h2.Driver
+    url: jdbc:h2:mem:testdb;Mode=Oracle
+    hibernateDialect: org.hibernate.dialect.H2Dialect
+    hibernateHbm2ddlAuto: update
 

@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=me.schnaidt.tracing.configuration.TracingAutoConfiguration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=me.schnaidt.tracing.aspect.configuration.TracingAutoConfiguration

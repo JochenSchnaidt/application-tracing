@@ -3,7 +3,7 @@ package me.schnaidt.business.controller;
 import lombok.extern.slf4j.Slf4j;
 import me.schnaidt.business.model.SomeBusinessObject;
 import me.schnaidt.business.persistence.PersistenceService;
-import me.schnaidt.tracing.TraceParameter;
+import me.schnaidt.tracing.aspect.TraceParameter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
